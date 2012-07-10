@@ -174,3 +174,8 @@ def to_json(self, orient="columns", double_precision=10,
     return dumps(self, orient=orient, double_precision=double_precision,
                  ensure_ascii=force_ascii)
 DataFrame.to_json = to_json
+
+def maybe_to_json(obj=None):
+    if hasattr(obj, 'to_json'):
+        return obj.to_json()
+    return obj
