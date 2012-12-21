@@ -122,6 +122,7 @@ extensions = [ujson_ext]
 setup(name=DISTNAME,
       version=FULLVERSION,
       maintainer=AUTHOR,
+      py_modules=['pandasjson'],
       ext_modules=extensions,
       maintainer_email=EMAIL,
       description=DESCRIPTION,
